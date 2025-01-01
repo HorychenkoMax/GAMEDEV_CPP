@@ -10,7 +10,7 @@ int main()
     if (num_1 >= num_2 && num_1 >= num_3) {
         std::cout << num_1;
     }
-    else if (num_2 >= num_1 && num_2 >= num_3) {
+    else if (num_2 >= num_3) {
         std::cout << num_2;
     }
     else {
@@ -33,7 +33,7 @@ int main()
     int ang_1 = 0, ang_2 = 0, ang_3 = 0;
     std::cout << "enter the values of the three angles: ";
     std::cin >> ang_1 >> ang_2 >> ang_3;
-    if (ang_1 + ang_2 + ang_3 == 180) {
+    if (ang_1 + ang_2 + ang_3 == 180 && ang_1 > 0 && ang_2 > 0 && ang_3 > 0) {
         std::cout << "the triangle is exist";
     }
     else
@@ -99,39 +99,42 @@ int main()
     int number = 0;
     std::cout << "Enter the number: ";
     std::cin >> number;
-    switch (number)
+    
+    Month month = static_cast<Month>(number);
+
+    switch (month)
     {
-    case static_cast<int>(Month::January):
+    case Month::January:
         std::cout << "January";
         break;
-    case static_cast<int>(Month::February):
+    case Month::February:
         std::cout << "February";
         break;
-    case static_cast<int>(Month::March):
+    case Month::March:
         std::cout << "March";
         break;
-    case static_cast<int>(Month::April):
+    case Month::April:
         std::cout << "April";
         break;
-    case static_cast<int>(Month::May):
+    case Month::May:
         std::cout << "May";
         break;
-    case static_cast<int>(Month::June):
+    case Month::June:
         std::cout << "June";
         break;
-    case static_cast<int>(Month::July):
+    case Month::July:
         std::cout << "July";
         break;
-    case static_cast<int>(Month::August):
+    case Month::August:
         std::cout << "August";
         break;
-    case static_cast<int>(Month::September):
+    case Month::September:
         std::cout << "September";
         break;
-    case static_cast<int>(Month::November):
+    case Month::November:
         std::cout << "November";
         break;
-    case static_cast<int>(Month::December):
+    case Month::December:
         std::cout << "December";
         break;
     default:
