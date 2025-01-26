@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <cctype>
 
 int main()
@@ -23,12 +23,67 @@ int main()
 	for (int i = 1; i <= n; i++) {
 		std::cout << "a" << i << " = " << a1 + d * (i - 1) << std::endl;
 	}
+	*/
 	
 	//Task 2
-	// I can't understand the task: should I have 5 separate implementations (a-e) 
-	// for the 5 shapes, where i simply input the number of rows and the length? Or should i have one single 
-	// code that can draw these shapes by selecting the desired one from a "menu"?
-	
+	int a = 0, b = 0;
+
+	std::cout << "Enter a: ";
+	std::cin >> a;
+	std::cout << "Enter b: ";
+	std::cin >> b;
+
+
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b - i; j++) {
+			std::cout << "*";
+		}
+		std::cout << std::endl;
+	}
+
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b && j < i; j++) {
+			std::cout << "*";
+		}
+		std::cout << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b; j++) {
+			std::cout << "*";
+		}
+		std::cout << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < a; i++) {
+		for (int p = 0; p < i; p++) {
+			std::cout << " ";
+		}
+
+		for (int j = 0; j < b; j++) {
+			std::cout << "*";
+		}
+		std::cout << std::endl;			// Чи є гарніший спосіб це зробити?
+	}
+
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b && j < i; j++) {
+			if ((i + 1 + j) % 2 == 0) {		// Чи є гарніший спосіб це зробити?
+				std::cout << "1";
+			}
+			else
+			{
+				std::cout << "0";
+			}
+		}
+		std::cout << std::endl;
+	}
+
+	/*
 	//Task 3
 	int sum = 0;
 	char character;
@@ -71,7 +126,7 @@ int main()
 		result *= i;
 	}
 	std::cout << result;
-	*/
+	
 	//Task 4
 	int f0 = 0, f1 = 1, fn = 0, n = 0;
 	while (true) {
@@ -99,5 +154,6 @@ int main()
 			break;
 		}
 	}
+	*/
 	
 }
